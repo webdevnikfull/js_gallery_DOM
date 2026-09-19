@@ -1,33 +1,43 @@
-# 🖼️ JS Gallery DOM
+# 🧪 QA Automation Portfolio: Interactive Gallery DOM Validation
 
-> An interactive photo gallery implemented using vanilla JavaScript, DOM manipulation, and SCSS styles. The project features a complete configuration of code quality control tools and automated End-to-End (E2E) tests.
+> About this repository: This project demonstrates automated UI testing of dynamic DOM manipulation (an interactive photo gallery with thumbnail switching and main view state changes) using Cypress. It also highlights a modern "Shift-Left" QA approach through extensive static code analysis and Continuous Integration (CI/CD).
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Cypress](https://img.shields.io/badge/-Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
-![ESLint](https://img.shields.io/badge/-ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/-CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Static Analysis](https://img.shields.io/badge/Static_Analysis-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
 ## 🎯 Project Overview
 
-The main objective of the project is to create a smooth-running gallery with thumbnails and a main view, supporting dynamic interface state changes. As a project adhering to high engineering standards, it includes a rigorous configuration for static code analysis and UI test automation.
+This application is a Vanilla JavaScript implementation of an interactive photo gallery supporting dynamic interface state changes, thumbnails, and a main image view.
 
-## 🛠️ Tech Stack & Tools
+As a QA Automation Engineer, my focus in this repository is to validate UI interactions, dynamic DOM updates, and state transitions to ensure a smooth and reliable user experience.
 
-* **Frontend:** JavaScript (ES6+), HTML5, SCSS / Sass
-* **E2E Testing:** Cypress (`cypress/integration/galleryDom.spec.js`)
-* **Code Quality (Linters):** ESLint, Stylelint, Prettier, LintHTML
-* **CI/CD:** GitHub Actions (`.github/workflows/test.yml`)
+## 🛠️ QA Tech Stack & Tools
 
-## 📂 Directory Structure
+* **E2E / UI Automation:** Cypress
+* **CI/CD Pipeline:** GitHub Actions (Automated test execution on push/PR)
+* **Static Code Analysis (Shift-Left QA):** ESLint, Stylelint, LintHTML, Prettier
+* **Core Technologies:** HTML5, SCSS, Vanilla JS (ES6+)
 
-```text
-js_gallery_DOM-master/
-├── .github/workflows/     # CI/CD configuration (GitHub Actions)
-├── cypress/               # Automated E2E tests (Cypress)
-├── src/
-│   ├── images/            # Graphic assets and thumbnails
-│   ├── scripts/           # Application logic (main.js file)
-│   ├── styles/            # SCSS stylesheets (main.scss)
-│   └── index.html         # Main DOM template
-├── package.json           # npm dependencies and scripts
-└── ...
+## 📊 Test Strategy & Coverage
+
+### 1. Automated UI Testing (Cypress)
+Located in `cypress/integration/galleryDom.spec.js`, the test suite simulates real user interactions to verify:
+* Proper rendering of thumbnails and the main view container.
+* Smooth switching of the active image upon clicking thumbnails.
+* Stability and integrity of the DOM structure post-interaction.
+
+### 2. Continuous Integration (CI/CD)
+The project utilizes GitHub Actions (`.github/workflows/test.yml`) to enforce quality gates. Every commit automatically triggers a pipeline that:
+* Lints the HTML, CSS, and JS files to catch syntax and formatting issues early.
+* Runs the Cypress E2E test suite in a headless environment.
+
+## 🚀 How to Run the Tests Locally
+
+To evaluate the test scripts and static analysis tools on your local machine, follow these steps:
+
+### 1. Environment Setup
+Clone the repository and install the Node.js dependencies:
+```bash
+npm install
